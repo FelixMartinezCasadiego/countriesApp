@@ -6,7 +6,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function ItemList({data}) {
+export default function ItemList( props ) {
+
+  console.log(props)
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -17,7 +20,7 @@ export default function ItemList({data}) {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {data?.name?.common}
+
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -38,10 +41,12 @@ import Data  from '../../data/Data';
 
 
 
-export const ItemList = () => {
+const ItemList = () => {
   return (
     <div>
         <Data />
     </div>
   )
-} */
+}
+
+export default ItemList; */

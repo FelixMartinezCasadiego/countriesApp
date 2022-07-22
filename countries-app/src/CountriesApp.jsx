@@ -1,5 +1,5 @@
 import React from 'react';
-import {ItemList} from './components/itemList/ItemList';
+import ItemList from './components/itemList/ItemList';
 
 export const CountriesApp = () => {
   return (

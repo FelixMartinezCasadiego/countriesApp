@@ -8,26 +8,24 @@ const Data = () => {
 
     const url = `https://restcountries.com/v3.1/all` ;
 
-    useEffect(() => {
-      fetch(url).
-        then((response) => response.json()).
-            then((json) => setCountries(json));
+    useEffect( () => {
+        ApiCountries();
     }, [])
     
+    const ApiCountries = async() =>{
+        try {
+            const fetchCountries = await fetch(url);
+            const countriesJson = await fetchCountries.json();
+            setCountries(countriesJson)
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
 
     return (
         <>
-
-            <div>
-                {countries.map((country)=> {
-                    return (
-                        <div key={country.id}>
-                            <ItemList data={country} />
-                        </div>
-                    )
-                })}
-            </div>
-        
+            <ItemList countries={countries} />
         </>
     )
 }
