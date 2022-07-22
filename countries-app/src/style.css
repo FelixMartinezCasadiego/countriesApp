@@ -1,1 +1,102 @@
+html {
+    background-color: whitesmoke;
+    margin: 0px;
+    padding: 0px;
 
+}
+
+/* body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+} */
+
+main {
+    padding-top: 90px;
+    margin: 10px;
+}
+
+/* NavBar */
+
+.NavHome{
+    display: flex;
+    background-color: white;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    margin-top: -10px;
+    box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 21%);
+/*     margin-left: -222px; */
+
+}
+
+/* ItemList */
+
+.ItemListOrden{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-column-gap: 80px;
+    grid-row-gap: 80px;
+
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+
+    /* max-width: 1100px; */
+    
+}
+
+/* Item */
+
+.cardMedia{
+/*     height: 400px;
+    width: 100%;
+    padding: 0;
+    margin: 0; */
+
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 21%);
+    cursor: pointer;
+    transition: all 400ms ease;
+    width: 300px;
+    height: 400px;
+
+    display: grid;
+    justify-items: center;
+
+}
+
+.cardMedia img{
+    width: 100%;
+    height: 150px;
+}
+
+.figureMedia {
+    background-color: aquamarine;
+    height: 200px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.imageFigure {
+    max-width: 220px;
+    min-height: 150px;
+    width: 100%;
+}
+
+/* Search */
+
+.SearchColor{
+    background-color: whitesmoke;
+}

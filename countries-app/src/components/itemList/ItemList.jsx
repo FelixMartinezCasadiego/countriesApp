@@ -1,52 +1,36 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import { retriveCountries } from '../../api';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { Items } from './Items';
+import '../../style.css';
+import { Search } from '../pages/Search';
 
-export default function ItemList( props ) {
+export default function ItemList() {
 
-  console.log(props)
+  const [countries, setCountries] = useState([]);
+
+  useEffect(() => {
+    retriveCountries()
+      .then((resp) => setCountries(resp))
+      .catch((err) => {throw new Error(err)})
+  }, [])  
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
 
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+    <div>
+
+      <div>
+        <Search />
+      </div>
+
+      <div className='ItemListOrden'>
+        {
+          countries.map((country) => <Items key={country.name.official} country={country} /> )
+        }
+      </div>
+
+    </div>
+
   );
 }
 
-
-/* import React from 'react';
-import Data  from '../../data/Data';
-
-
-
-const ItemList = () => {
-  return (
-    <div>
-        <Data />
-    </div>
-  )
-}
-
-export default ItemList; */
