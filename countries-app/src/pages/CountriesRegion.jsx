@@ -1,18 +1,20 @@
 import React from 'react';
-import ItemList from '../components/itemList/ItemList';
-import { NavBar } from '../components/pages/NavBar';
 import {useParams} from 'react-router-dom';
+import '../style.css';
+import ItemList from '../components/itemList/ItemList';
 
 export const CountriesRegion = () => {
 
-  const {region} = useParams();
+  let params = useParams();
+  
+  let regionID = params.id;
+  
+  return(
 
-  return (
     <>
-      <NavBar />
       <main>
 
-        <ItemList region={region} />
+        <ItemList region={regionID} />
 
       </main>
     </>

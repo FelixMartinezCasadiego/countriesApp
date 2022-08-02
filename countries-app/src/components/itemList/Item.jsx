@@ -1,13 +1,14 @@
 
+import { Link } from 'react-router-dom';
 import '../../style.css';
 
-export const Items = ( {country} ) => {
+export const Item = ( {country} ) => {
 
 
   return (  
 
 
-    <div className='cardMedia'>
+    <Link to={`/country/${country.name.official}`} className='cardMedia'>
 
       <figure>
         <img src={country.flags.svg} alt={country.name.common} />
@@ -22,7 +23,7 @@ export const Items = ( {country} ) => {
       </div>
 
 
-    </div>
+    </Link>
 
   )
 }
