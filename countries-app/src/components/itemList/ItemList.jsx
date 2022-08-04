@@ -1,16 +1,21 @@
-import { retriveCountries, retriveCountryByRegion } from '../../api';
+import { retriveCountries, retriveCountryByName, retriveCountryByRegion } from '../../api';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Item } from './Item';
 import '../../style.css';
 import { Search } from '../pages/Search';
 
-export default function ItemList({region}) {
+export default function ItemList({region, q}) {
 
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    if(region === null){
+    
+    if( q !== null && q !== '' ){
+      retriveCountryByName(q)
+        .then((resp) => setCountries(resp))
+        .catch((err) => {throw new Error(err)})
+    } else if (region === null){
       retriveCountries()
         .then((resp) => setCountries(resp))
         .catch((err) => {throw new Error(err)})
@@ -18,9 +23,9 @@ export default function ItemList({region}) {
       retriveCountryByRegion(region)
         .then((resp) => setCountries(resp))
         .catch((err) => {throw new Error(err)})
-    }
+    } 
     
-  }, [region])  
+  }, [region, q])  
 
   return (
 

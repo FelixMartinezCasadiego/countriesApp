@@ -205,7 +205,7 @@ figure{
 }
 
 .dropDownFilter > ul > li:hover{
-    background: whitesmoke ;
+    background: rgba(245, 245, 245, 0.445) ;
 }
 
 .dropDownFilter > ul {

@@ -14,7 +14,7 @@ export const CountriesRegion = () => {
     <>
       <main>
 
-        <ItemList region={regionID} />
+        <ItemList region={regionID} q={null} />
 
       </main>
     </>

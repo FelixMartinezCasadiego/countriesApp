@@ -1,11 +1,27 @@
 import React from 'react';
 import { useState } from 'react';
 import '../../style.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { useForm } from '../../hooks/useForm';
 
-export const Search = ({region}) => {
+export const Search = () => {
+
+  const navigate = useNavigate(); // Obtener navegación
+
+  //const location = useLocation(); // Obtener información de ubicación
 
   const [ dropDown, setDropDown] = useState('none');
+
+  const { searchCountry, onInputChange} = useForm({
+    searchCountry: ''
+  });
+
+  const onSubmit = (e) =>{
+    e.preventDefault();
+    if(searchCountry.trim().length <= 1) return;
+
+    navigate(`/?q=${searchCountry.toLowerCase()}`)
+  }
 
   const openButton = () =>{
 
@@ -20,8 +36,15 @@ export const Search = ({region}) => {
   return (
     <div className='searchMain'>
     
-      <form className='formSearch'>
-        <input type="text" placeholder='Search for a country...' required />
+      <form className='formSearch' onSubmit={onSubmit} /* onSubmit={onSubmit} */>
+        <input 
+          type="text" 
+          placeholder='Search for a country...' 
+          required 
+          name='searchCountry'
+          value={searchCountry}
+          onChange={onInputChange}
+        />
         <div className='btnSearch'>
           <i className="fa-solid fa-magnifying-glass"></i>
         </div>
