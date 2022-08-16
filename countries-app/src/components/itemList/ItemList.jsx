@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { Item } from './Item';
 import '../../style.css';
 import { Search } from '../pages/Search';
+import { ThemeProvider } from '@emotion/react';
 
 export default function ItemList({region, q}) {
 
