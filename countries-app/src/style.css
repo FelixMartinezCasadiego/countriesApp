@@ -67,6 +67,17 @@ main.darkMain > main > div > .ItemListOrden{
     background-color: #202D36;
 }
 
+main.darkMain > main {
+    background-color: #202D36;
+}
+
+main.darkMain > main > div > .ItemListOrden > .cardMedia{
+    background-color: #2B3743;
+    box-shadow: none;
+    border: 1px solid #2B3743;
+    color: white;
+}
+
     /* ItemList - Responsive */
 
     @media screen and (max-width: 1200px) {
@@ -148,6 +159,26 @@ figure{
     background-color: whitesmoke;
     display: flex;
     justify-content: space-between;
+}
+
+main.darkMain > main > div > div > .searchMain{
+    background-color: #202D36;
+}
+
+main.darkMain > main > div > div > .searchMain > .formSearch > input {
+    background-color: #2B3743;
+    border: 1px solid #2B3743;
+    color: #fff;
+}
+
+main.darkMain > main > div > div > .searchMain > div > .filterSearch {
+    background-color: #2B3743;
+    border: 1px solid #2B3743;
+    color: #fff;
+}
+
+main.darkMain > main > div > div > .searchMain > div > .filterSearch > button > i {
+    color: #fff;
 }
 
 .formSearch{
