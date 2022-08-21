@@ -1,8 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
 import '../../style.css';
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from '../../hooks/useForm';
+import { useContext } from 'react';
+import { Context } from '../../context/ItemContext';
 
 export const Search = () => {
 
@@ -15,6 +17,8 @@ export const Search = () => {
   const { searchCountry, onInputChange} = useForm({
     searchCountry: ''
   });
+
+  const {theme} =useContext(Context);
 
   const onSubmit = (e) =>{
     e.preventDefault();
@@ -46,7 +50,7 @@ export const Search = () => {
           onChange={onInputChange}
         />
         <div className='btnSearch'>
-          <i className="fa-solid fa-magnifying-glass"></i>
+          <i className={ theme === 'dark' ? 'colorFontAwesome fa-solid fa-magnifying-glass' : 'fa-solid fa-magnifying-glass ' } ></i>
         </div>
       </form>
 

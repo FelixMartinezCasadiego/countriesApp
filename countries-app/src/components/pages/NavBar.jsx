@@ -6,8 +6,6 @@ import { Context } from '../../context/ItemContext';
 
 export const NavBar = () => {
 
-    const [toggleChange, setToggleChange] = useState(false);
-
     const {theme, setTheme} = useContext(Context);
 
     const changeMode = () => {
@@ -25,7 +23,7 @@ export const NavBar = () => {
     return (
 
         <nav>
-            <div className='NavHome'>
+            <div className={theme === 'dark' ? 'NavHomeDark' : 'NavHomeLight' } >
 
                 <Link to={'/'}>
                     <h1>Where in the world?</h1>
