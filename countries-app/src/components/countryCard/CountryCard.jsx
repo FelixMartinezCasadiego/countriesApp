@@ -1,15 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const CountryCard = ({country}) => {
 
-  console.log(country.translations)
+
+  console.log(country.borders.map((border) => border ))
+
   return (
 
     <>
     
     <div>
 
-      <button> <i className="fa-solid fa-arrow-left"></i> Back</button>
+      <Link to={'/'}> <i className="fa-solid fa-arrow-left"></i> Back</Link>
 
       <figure>
         <img src={country.flags.svg} alt={country.name.common} />
@@ -21,7 +24,7 @@ export const CountryCard = ({country}) => {
 
         <div>
           <h4> Native Name: </h4>
-          <p> {/* {country.name.common}  */}</p>
+          <p> {country.altSpellings[2]}  </p>
         </div>
 
         <div>
@@ -31,32 +34,32 @@ export const CountryCard = ({country}) => {
 
         <div>
           <h4> Region: </h4>
-          <p> </p>
+          <p> {country.region} </p>
         </div>
 
         <div>
           <h4> Sub Region: </h4>
-          <p> </p>
+          <p> {country.subregion} </p>
         </div>
 
         <div>
           <h4> Capital </h4>
-          <p> </p>
+          <p> {country.capital} </p>
         </div>
 
         <div>
           <h4> Top Level Domain: </h4>
-          <p> </p>
+          <p> {country.tld} </p>
         </div>
 
         <div>
           <h4> Currencies: </h4>
-          <p> </p>
+          <p> {(Object.values(country.currencies)[0].name)} </p>
         </div>
 
         <div>
           <h4> Languages: </h4>
-          <p> </p>
+          <p> {Object.values(country.languages).map((language) => language ).join(' , ')} </p>
         </div>
 
       </div>
@@ -65,7 +68,7 @@ export const CountryCard = ({country}) => {
         <div>
           <h4> Border countries: </h4>
           <div>
-            <button> {country.borders} </button>
+            {country.borders.map(border => <button className='btnCountryCard'>{border}</button>)}
           </div>
           
         </div>
