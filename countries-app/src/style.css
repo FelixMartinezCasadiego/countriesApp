@@ -10,6 +10,10 @@ body {
     margin: 0px;
 }
 
+h4{
+    margin: 0px;
+}
+
 main {
     padding-top: 60px;
     display: flex;
@@ -325,4 +329,72 @@ main.darkMain > main > div > div > .searchMain > div > .filterSearch > .dropDown
     .btnCountryCard{
         width: 130px;
         margin: 0px 20px 50px 0px;
+        box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 21%);
+        border-radius: 3px;
+        background-color: #fafafa;
+        border-style: none;
+        height: 30px;
+    }
+
+    .btnBack{
+        background-color: #fafafa;
+        border-radius: 10px;
+        box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 21%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 40px;
+    }
+
+    .countryCardContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+
+    .countryCardContainer img{
+        height: 100%;
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .figureCountryCard{
+        margin-top: 20px;
+    }
+
+    .wrapCounntryCard{
+        margin: 50px;
+    }
+
+    .wrapCountryCard1{
+        display: flex;
+        column-gap: 100px;
+    }
+
+    .wrapCountryCard2{
+        margin: 0px 0px 0px 80px;
+    }
+
+    .wrapCountryCard3{
+        display: flex;
+        column-gap: 30px;
+        margin-top: 100px;
+    }
+
+    main.darkMain > .wrapCounntryCard {
+        color: white;
+    }
+
+    main.darkMain > .wrapCounntryCard > div.btnBack {
+        background-color: #2B3743;
+        color: white;
+    }
+
+    main.darkMain > .wrapCounntryCard > div > a {
+        color: white;
+    }
+
+    main.darkMain > div > div > div > div > div > button {
+        background-color: #2B3743;
+        color: white;
     }
