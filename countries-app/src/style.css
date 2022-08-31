@@ -398,3 +398,42 @@ main.darkMain > main > div > div > .searchMain > div > .filterSearch > .dropDown
         background-color: #2B3743;
         color: white;
     }
+    
+        /* CountryCard Responsive */
+
+        @media screen and (max-width: 1200px) {
+            .wrapCounntryCard{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-row-gap: 80px;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .countryCardContainer{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-row-gap: 40px;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .wrapCountryCard1{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-row-gap: 40px;
+            }
+
+            .wrapCountryCard2{
+                margin: 0px;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .wrapCountryCard3{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-row-gap: 30px;
+
+            }
+        }
