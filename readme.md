@@ -27,7 +27,3 @@ I used for the creation ReactJs, React Router Dom and CSS.
 ![](imanG/portada-6.png)
 
 ![](imanG/portada-7.png)
-
-## Project Visualization
-
-Use this link to enter and view the complete project:
