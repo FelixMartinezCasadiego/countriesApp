@@ -20,13 +20,13 @@ I used for the creation ReactJs, React Router Dom and CSS.
 
 ![](imanG/filter.png)
 
-![](imanG/portada-5.png.png)
+![](imanG/portada-5.png)
 
 ### Country Information
 
-![](imanG/portada-6.png.png)
+![](imanG/portada-6.png)
 
-![](imanG/portada-7.png.png)
+![](imanG/portada-7.png)
 
 ## Project Visualization
 
